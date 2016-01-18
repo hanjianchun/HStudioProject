@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义TextView-->
+    <declare-styleable name="CustomTitle">
+        <attr name="myTitleText" format="string"/>
+        <attr name="myTitleColor" format="color"/>
+        <attr name="myTitleSize" format="dimension"/>
+    </declare-styleable>
+    <!--自定义等待框-->
+    <declare-styleable name="CustomProgressBar">
+        <attr name="firstColor" format="color"/>
+        <attr name="secondColor" format="color"/>
+        <attr name="circleWidth" format="dimension"/>
+        <attr name="speed" format="integer"/>
+    </declare-styleable>
+    <!--画一个 √ -->
+    <declare-styleable name="CustomYes">
+        <attr name="firstLength" format="integer"/>
+        <attr name="secondLength" format="integer"/>
+        <attr name="customColor" format="color"/>
+    </declare-styleable>
+</resources>
