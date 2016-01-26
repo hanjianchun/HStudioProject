@@ -19,4 +19,14 @@
         <attr name="secondLength" format="integer"/>
         <attr name="customColor" format="color"/>
     </declare-styleable>
+    <!--在等待结束后画√-->
+    <declare-styleable name="CustomProgessYes">
+        <attr name="firstLineLength" format="integer"/>
+        <attr name="secondLineLength" format="integer"/>
+        <attr name="lineColor" format="color"/>
+        <attr name="cicleColor" format="color"/>
+        <attr name="cicleExtend" format="integer"/>
+        <attr name="cicleSpeed" format="integer"/>
+    </declare-styleable>
+    
 </resources>

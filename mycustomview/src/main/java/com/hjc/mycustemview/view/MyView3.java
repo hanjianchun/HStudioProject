@@ -72,6 +72,9 @@ public class MyView3 extends View {
                 while(true){
                     if (firstLength==tempFirst){
                         if(tempSecond==secondLength){
+                            /**
+                             * 如果第二根线画完就停1s再接着来
+                             */
                             tempFirst = 0;
                             tempSecond= 0;
                             try {
@@ -85,6 +88,9 @@ public class MyView3 extends View {
                         tempFirst+=5;
                     postInvalidate();
                     try {
+                        /**
+                         * 设置划线的速度
+                         */
                         Thread.sleep(60);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
@@ -97,11 +103,27 @@ public class MyView3 extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
+        /**
+         * 计算出偏移量，否则第二跟线会超出边界
+         */
+        int deviation = secondLength-firstLength;
+        /**
+         * 设置线宽
+         */
         mPaint.setStrokeWidth((float) 5.0);
+        /**
+         * 设置自定义画笔颜色
+         */
         mPaint.setColor(customColor);
-        canvas.drawLine(50, 50, tempFirst+50, tempFirst+50, mPaint);
+        /**
+         * 画第一跟线
+         */
+        canvas.drawLine(0, deviation, tempFirst, tempFirst+deviation, mPaint);
+        /**
+         * 如果第一跟线长度达到设定的长度就开始画第二根线
+         */
         if(tempFirst == firstLength)
-            canvas.drawLine(tempFirst+50,tempFirst+50,tempSecond+firstLength+50,firstLength-tempSecond+50,mPaint);
+            canvas.drawLine(tempFirst,tempFirst+deviation,tempSecond+firstLength,firstLength-tempSecond+deviation,mPaint);
     }
 
 }

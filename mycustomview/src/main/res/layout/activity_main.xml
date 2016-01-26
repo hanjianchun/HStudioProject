@@ -27,11 +27,20 @@
         android:layout_below="@+id/view2"
         android:layout_centerHorizontal="true" />
 
-    <com.hjc.mycustemview.view.MyView3
+    <!--<com.hjc.mycustemview.view.MyView3-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--hjc:customColor="#124578"-->
+        <!--hjc:firstLength="80"-->
+        <!--hjc:secondLength="150"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--/>-->
+
+    <com.hjc.mycustemview.view.MyView4
         android:layout_width="200dp"
-        android:layout_height="150dp"
-        hjc:customColor="#124578"
+        android:layout_height="200dp"
         android:layout_below="@+id/view"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp" />
 
 </RelativeLayout>
